@@ -25,13 +25,24 @@ Purity in Decision Trees is determined by splitting the data to maximize the hom
 
 1. **Gini Impurity**:  
    Gini measures the probability of incorrectly classifying a randomly chosen instance from the dataset if it were labeled based on the distribution of labels in the node.  
-   $$ Gini = 1 - \sum_{i=1}^n p_i^2 $$  
+   
+   $$ 
+   Gini = 1 - \sum_{i=1}^n p_i^2
+   $$
+   
    where $p_i$ is the proportion of instances belonging to class $i$ in the node.
 
 2. **Entropy and Information Gain**:  
    Entropy quantifies the uncertainty in the data. Information Gain measures the reduction in entropy achieved after a split.  
-   $$ Entropy = -\sum_{i=1}^n p_i \log_2(p_i) $$  
-   $$ Information\ Gain = Entropy_{parent} - \sum_{children} \frac{N_{child}}{N_{parent}} \cdot Entropy_{child} $$  
+   
+   $$ 
+   Entropy = -\sum_{i=1}^n p_i \log_2(p_i) 
+   $$
+
+   $$ 
+   Information\ Gain = Entropy_{parent} - \sum_{children} \frac{N_{child}}{N_{parent}} \cdot Entropy_{child}
+   $$  
+   
    where $p_i$ is the class proportion, and $N$ represents the number of samples.
 
 3. **Mean Squared Error (MSE)**:  
